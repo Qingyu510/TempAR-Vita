@@ -27,8 +27,8 @@ namespace TempAR
         /// <param name="numstyle"></param>
         /// <returns></returns>
         public static uint ParseNum(string s, NumberStyles numstyle,
-                                    string message = "Unable to parse, please make sure the value is a valid hexadecimal number.",
-                                    string title   = "Unable to parse: Wrong Format!")
+                                    string message = "无法分析，请确保地址是有效的十六进制数。",
+                                    string title   = "无法分析：格式错误！")
         {
             try
             {
@@ -51,7 +51,7 @@ namespace TempAR
             {
                 if (x is TextBox box && x.Enabled)
                 {
-                    Utils.ParseNum(box.Text, NumberStyles.AllowHexSpecifier, "Unable to Parse an Offset, make sure value is a valid hexadecimal number.");
+                    Utils.ParseNum(box.Text, NumberStyles.AllowHexSpecifier, "无法分析偏移量，请确保值是有效的十六进制数。");
                 }
             }
         }
